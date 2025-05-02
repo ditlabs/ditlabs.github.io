@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>Document</title>
+</head>
+<body class="bg-slate-900">
+    <header class="bg-transparent fixed top-0 left-0 w-full flex items-center z-10 shadow-md">
+        <div class="container">
+          <div class="flex items-center justify-between relative">
+            <div class="px-4">
+              <a href="#home" class="block text-indigo-500 text-2xl py-6 font-bold dark:text-white">Dit Doang!</a>
+            </div>
+            <div class="flex items-center px-4">
+              <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                <span class="w-[30px] h-[3px] my-2 block rounded-xl transition duration-300 ease-in-out origin-top-left bg-slate-900 dark:bg-white"></span>
+                <span class="w-[30px] h-[3px] my-2 block rounded-xl transition duration-300 ease-in-out bg-slate-900 dark:bg-white"></span>
+                <span class="w-[30px] h-[3px] my-2 block rounded-xl transition duration-300 ease-in-out origin-bottom-left bg-slate-900 dark:bg-white"></span>
+              </button>
+    
+              <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-slate-900 dark:shadow-slate-500 lg:dark:bg-transparent">
+                <ul class="block lg:flex">
+                  <li class="group">
+                    <a href="#home" class="text-base text-slate-900 dark:text-white py-2 mx-8 flex group-hover:text-indigo-500">Beranda</a>
+                  </li>
+                  <li class="group">
+                    <a href="#about" class="text-base text-slate-900 dark:text-white py-2 mx-8 flex group-hover:text-indigo-500">About</a>
+                  </li>
+                  <li class="group">
+                    <a href="#project" class="text-base text-slate-900 dark:text-white py-2 mx-8 flex group-hover:text-indigo-500">Projects</a>
+                  </li>
+                  <li class="group">
+                    <a href="#contact" class="text-base text-slate-900 dark:text-white py-2 mx-8 flex group-hover:text-indigo-500">Contact</a>
+                  </li>
+                  <li class="flex items-center pl-8 lg:mt-0 sm:mt-3">
+                    <div class="flex">
+                      <span class="mr-2 text-sm text-slate-900 dark:text-white">Light</span>
+                      <input type="checkbox" class="hidden" id="dark-toggle">
+                      <label for="dark-toggle">
+                        <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-indigo-600 p-1">
+                          <div class="toggle-circle h-4 w-4 bg-white rounded-full transition duration-300 ease-in-out"></div>
+                        </div>
+                      </label>
+                      <span class="ml-2 text-sm text-slate-900 dark:text-white">Dark</span>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <script src="script.js"></script>
+    </body>
+</html>
