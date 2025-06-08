@@ -34,7 +34,32 @@
   </script>
 </head>
 <body>
-  
+  <nav class="container flex items-center justify-between p-4 relative">
+  <!-- Logo -->
+  <div>
+    <h1 class="text-4xl font-semibold">Dit Doang!</h1>
+  </div>
+
+  <!-- Tombol Hamburger (mobile only) -->
+  <div class="lg:hidden">
+    <button id="hamburger" class="text-4xl focus:outline-none">&#9776;</button>
+  </div>
+
+  <!-- Menu horizontal (desktop only) -->
+  <div id="menu" class="hidden lg:flex space-x-12">
+    <a class="text-xl font-medium" href="#">Home</a>
+    <a class="text-xl font-medium" href="#">About</a>
+    <a class="text-xl font-medium" href="#">Services</a>
+    <a class="text-xl font-medium" href="#">Contact</a>
+  </div>
+
+  <!-- Pop-up Menu (mobile) -->
+  <div id="popup" class="hidden absolute top-20 right-4 w-56 bg-white border border-gray-200 shadow-xl rounded-xl p-4 flex-col z-50 lg:hidden animate-fade-in">
+    <a class="block text-lg font-medium text-gray-700 hover:text-green-500 transition border-b pb-2 mb-2" href="#">Home</a>
+    <a class="block text-lg font-medium text-gray-700 hover:text-green-500 transition border-b pb-2 mb-2" href="#">About</a>
+    <a class="block text-lg font-medium text-gray-700 hover:text-green-500 transition" href="#">Services</a>
+  </div>
+</nav>
 </body>
 <!-- Tracker Do.my.id -->
  <script type="module" src="script.js"></script>
