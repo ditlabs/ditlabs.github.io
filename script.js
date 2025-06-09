@@ -1,17 +1,20 @@
 // Mobile menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const popup = document.getElementById('popup');
-    
-    hamburger.addEventListener('click', () => {
-      popup.classList.toggle('hidden');
-    });
-    
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!popup.contains(e.target) {
-        popup.classList.add('hidden');
-      }
-    });
+const hamburger = document.getElementById('hamburger');
+const popup = document.getElementById('popup');
+
+// Toggle menu saat tombol diklik
+hamburger.addEventListener('click', (e) => {
+  e.stopPropagation(); // 🔥 Cegah event bubbling
+  popup.classList.toggle('hidden');
+});
+
+// Tutup menu saat klik di luar
+document.addEventListener('click', (e) => {
+  const isClickInside = popup.contains(e.target) || hamburger.contains(e.target);
+  if (!isClickInside) {
+    popup.classList.add('hidden');
+  }
+})
     
     // Scroll to top functionality
     const scrollTopButton = document.querySelector('.scroll-top');
