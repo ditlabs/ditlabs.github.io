@@ -53,3 +53,18 @@ document.addEventListener('click', (e) => {
     
     // Check on scroll
     window.addEventListener('scroll', animateOnScroll);
+
+    document.addEventListener('DOMContentLoaded', () => {
+  const marqueeContent = document.getElementById('marquee-content');
+  
+  if (marqueeContent) {
+    // Ambil semua item asli
+    const originalItems = Array.from(marqueeContent.children);
+    
+    // Duplikasi semua item untuk menciptakan loop yang mulus
+    originalItems.forEach(item => {
+      const clone = item.cloneNode(true);
+      marqueeContent.appendChild(clone);
+    });
+  }
+});
