@@ -21,6 +21,9 @@ tailwind.config = {
               900: '#14532d',
             }
           },
+          screens: {
+            '2xl': '1320px',
+          },
           animation: {
             'fade-in': 'fadeIn 0.5s ease-in-out forwards',
             'float': 'float 6s ease-in-out infinite',
